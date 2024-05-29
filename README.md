@@ -1,8 +1,4 @@
 
 
-
-
-
-
-https://github.com/irem6142/PyGuru/assets/83772404/e7bbd92f-b27d-4344-9879-0e0e052b17b2
+https://github.com/irem6142/PyGuru/assets/83772404/ece5d0e0-868a-4ace-9ecf-ee542d98daa3
 
