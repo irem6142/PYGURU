@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title style="color: white; font-size: 24px;">Koşullu İfadeler</title>
+  <style>
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #7AAAB6, #D3BEBD, #E9CAC8, #B7D0CD, #E6E0E5);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+.dashboard-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f44336;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+.container {
+  width: 450px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255, 0.2);
+  border-bottom:1px solid rgba(255,255,255, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.option {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #428bca;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #3071a9;
+}
+
+.result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+  </style>
+</head>
+<body>
+  <div>
+    <button id="goToDashboard" class="dashboard-button">Dashboard'a Git</button>
+  </div>
+
+  <div class="container">
+    <div id="introPanel" class="panel">
+    <h1>Koşullu İfadeler</h1>
+    <p>Koşullu ifadeler, bir programın belirli koşullar altında farklı işlemler yapmasını sağlayan yapıları ifade eder. Bu yapılar, genellikle "if", "else" ve "else if" şeklinde kullanılır. Örneğin:</p>
+    <pre>
+      if (koşul) {
+        // Koşul doğruysa bu blok çalışır
+      } else {
+        // Koşul yanlışsa bu blok çalışır
+      }
+    </pre>
+    <p>Ayrıca, "else if" kullanarak programın birden fazla koşulu kontrol etmesini sağlayabiliriz:</p>
+    <pre>
+      if (koşul1) {
+        // Koşul1 doğruysa bu blok çalışır
+      } else if (koşul2) {
+        // Koşul2 doğruysa bu blok çalışır
+      } else {
+        // Ne koşul1 ne de koşul2 doğruysa bu blok çalışır
+      }
+    </pre>
+    <button id="startQuiz" class="button">Test Sorularını Başlat</button>
+  </div>
+  
+  <div id="quizPanel" class="panel hide">
+      <div id="quiz"></div>
+      <div id="result" class="result"></div>
+      <button id="submit" class="button">Sonraki Soru</button>
+      <button id="retry" class="button hide">Tekrar Denemek İstiyorum</button>
+      <button id="showAnswer" class="button hide">Cevapları Göster</button>
+  </div>
+</div>
+
+
+<script src="conditional-statements.js"></script>
+<script>
+  document.getElementById('startQuiz').addEventListener('click', function() {
+      document.getElementById('introPanel').classList.add('hide');
+      document.getElementById('quizPanel').classList.remove('hide');
+  });
+</script>
+<script>
+  document.getElementById('goToDashboard').addEventListener('click', function() {
+      window.location.href = 'dashboard.html';
+  });
+</script>
+    
+</body>
+</html>

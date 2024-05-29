@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Quiz App</title>
+  <link rel="stylesheet" href="kendini-test-et.css">
+  <style>
+    .dashboard-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #f44336;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kendini Test Et</h1>
+    <div id="quiz"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Sonraki soru</button>
+    <button id="retry" class="button hide">Tekrar denemek istiyorum</button>
+    <button id="showAnswer" class="button hide">Cevapları göster</button>
+  </div>
+  <button id="goToDashboard" class="dashboard-button">Dashboard'a Git</button>
+
+  <script src="kendini-test-et.js"></script>
+  <script>
+    document.getElementById('goToDashboard').addEventListener('click', function() {
+      window.location.href = "dashboard.html";
+    });
+  </script>
+</body>
+</html>

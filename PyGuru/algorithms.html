@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma Öğreniyorum</title>
+    <link rel="stylesheet" href="algo.css">
+    <style>
+        .dashboard-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="introPanel" class="panel">
+            <h1>Algoritma Nedir?</h1>
+            <p>Algoritma, belirli bir problemi çözmek için adım adım bir plan veya yönergeler bütünüdür. Bu adımların her biri, problemin çözümünü adım adım ilerleterek sağlar.</p>
+            <h1>Algoritmanın Önemi</h1>
+            <p><strong>1. Problemleri Çözme Yeteneği:</strong> Algoritmalar, karmaşık problemleri daha küçük ve daha yönetilebilir parçalara böler, böylece problemleri çözme sürecini basitleştirir.</p>
+            <p><strong>2. Verimlilik:</strong> İyi tasarlanmış algoritmalar, işlemleri daha hızlı ve daha verimli bir şekilde gerçekleştirmemizi sağlar.</p>
+            <p><strong>3. Genel Kullanım:</strong> Algoritmalar, programlama dillerinden bağımsızdır ve genel olarak anlaşılabilir ve uygulanabilir. Bu, farklı alanlarda ve farklı platformlarda kullanılmalarını sağlar.</p>
+            <button id="startQuiz" class="button">Test Sorularını Başlat</button>
+        </div>
+        <div id="quizPanel" class="panel hide">
+            <div id="quiz"></div>
+            <div id="result" class="result"></div>
+            <button id="submit" class="button">Sonraki Soru</button>
+            <button id="retry" class="button hide">Tekrar Denemek İstiyorum</button>
+            <button id="showAnswer" class="button hide">Cevapları Göster</button>
+        </div>
+    </div>
+    <div>
+        <button id="goToDashboard" class="dashboard-button">Dashboard'a Git</button>
+    </div>
+    <script src="algorithm.js"></script>
+    
+   
+
+
+    <script>
+        document.getElementById('startQuiz').addEventListener('click', function() {
+            document.getElementById('introPanel').classList.add('hide');
+            document.getElementById('quizPanel').classList.remove('hide');
+        });
+        document.getElementById('goToDashboard').addEventListener('click', function() {
+            window.location.href = "dashboard.html";
+        });
+    </script>
+</body>
+</html>

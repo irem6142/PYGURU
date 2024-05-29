@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            background: linear-gradient(90deg, #7AAAB6, #D3BEBD, #E9CAC8,#B7D0CD,#E6E0E5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        h1 {
+            color: #fff;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .btn-btn1 {
+            background: linear-gradient(90deg, #043d7e, #9e0797);
+            border-radius: 999px;
+            box-sizing: border-box;
+            color: #fff;
+            display: block;
+            font-weight: 900;
+            overflow: hidden;
+            padding: 2.5rem 6rem;
+            position: relative;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            flex: 1;
+            font-size: 1.8rem;
+             
+        }
+
+        .btn-btn1 span {
+            background: #1e293b;
+            border-radius: 999px;
+            color: #fff;
+            display: grid;
+            inset: 5px;
+            place-items: center;
+            position: absolute;
+            transition: background 0.3s;
+          
+        }
+
+        .btn-btn1:hover span {
+            background: none;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 800px;
+        }
+
+        button {
+            box-shadow: 0 0 5px purple, 0 0 25px purple;
+        }
+
+        button:hover {
+            box-shadow: 0 0 5px purple, 0 0 25px purple, 0 0 50px purple, 0 0 100px purple, 0 0 200px purple;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anasayfaya Hoşgeldiniz</h1>
+    <div class="button-container">
+        <div class="button-group">
+            <button class="btn-btn1" onclick="location.href='algorithms.html'">Algoritmalar</button>
+            <button class="btn-btn1" onclick="location.href='data-types.html'">Veri Türleri</button>
+        </div>
+        <div class="button-group">
+            <button class="btn-btn1" onclick="location.href='conditional-statements.html'">Koşullu İfadeler</button>
+            <button class="btn-btn1" onclick="location.href='KendiniTestEt.html'">Kendini Test Et</button>
+        </div>
+        <div class="button-group">
+            <button class="btn-btn1" onclick="location.href='takip.html'">Kullanıcı Paneli</button>
+        </div>
+    </div>
+    <script>
+        // Burada gerekirse JavaScript kodları eklenebilir
+    </script>
+</body>
+</html>

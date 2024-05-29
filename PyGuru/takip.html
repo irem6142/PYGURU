@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kullanıcı Takip Paneli</title>
+  <style>
+    body {
+      background: linear-gradient(90deg, #7AAAB6, #D3BEBD, #E9CAC8, #B7D0CD, #E6E0E5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #fff;
+      font-size: 4rem;
+      text-align: center;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between; /* Adjust horizontal alignment */
+      margin-top: 4rem;
+      width: 1000px; /* Maintain container width */
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: nowrap; /* Disable wrapping for single row */
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column; /* Stack text and status vertically */
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(231, 113, 113);
+      border-radius: 10px;
+      box-sizing: border-box;
+      color: #ffffff;
+      font-weight: 900;
+      overflow: hidden;
+      padding: 1.5rem 2rem; /* Reduced padding for tighter fit */
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      margin: 10px;
+      flex: 1; /* Allow buttons to share available space */
+      width: unset; /* Remove fixed width for flex to work */
+      font-size: 0.9rem; /* Slightly smaller font for better fit */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .button span {
+      font-size: 0.8rem; /* Slightly smaller status text */
+      color: #999;
+      margin-top: 0.5rem; /* Add spacing between label and status */
+    }
+
+    .back-button {
+      background-color: #fff;
+      border: none;
+      border-radius: 10px;
+      color: #000;
+      cursor: pointer;
+      padding: 1.5rem 3rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kullanıcı Takip Paneli</h1>
+    <div class="button-container">
+      <div class="button-group">
+        <button id="algo" class="button">
+          Algoritmalar
+          <span>Tamamlanmadı</span>
+        </button>
+        <button id="veri" class="button">
+          Veri Türleri
+          <span>Tamamlanmadı</span>
+        </button>
+        <button id="testEt" class="button">
+          Kendini test et
+          <span>Tamamlanmadı</span>
+        </button>
+        <button id="kosullu" class="button">
+          Koşullu İfadeler
+          <span>Tamamlanmadı</span>
+        </button>
+        <button id="resetButton" class="button">
+          Testleri Sıfırla
+        </button>
+      </div>
+    </div>
+    <button class="back-button" onclick="window.location.href='dashboard.html'">Geri</button>
+  </div>
+  <script>
+    window.onload = function() {
+      
+        var algoritmalar = localStorage.getItem('algoritmalar');
+        var kosulluIfade = localStorage.getItem('kosulluIfade');
+        var veriTipi = localStorage.getItem('veriTipi');
+        var kendiniTestEt = localStorage.getItem('kendiniTestEt');
+        if (algoritmalar) {
+            document.getElementById("algo").style.backgroundColor = algoritmalar;
+            document.getElementById("algo").innerHTML="Algoritmalar<span>Tamamlandı</span>";
+        }
+        if (kosulluIfade) {
+            document.getElementById("kosullu").style.backgroundColor = kosulluIfade;
+            document.getElementById("kosullu").innerHTML="Veri Türleri<span>Tamamlandı</span>";
+        }
+        if (veriTipi) {
+            document.getElementById("veri").style.backgroundColor = veriTipi;
+            document.getElementById("veri").innerHTML="Koşullu İfadeler<span>Tamamlandı</span>";
+        }
+        if (kendiniTestEt) {
+            document.getElementById("testEt").style.backgroundColor = kendiniTestEt;
+            document.getElementById("testEt").innerHTML="Kendini test et<span>Tamamlandı</span>";
+        }
+    }
+    document.getElementById("resetButton").addEventListener("click", function() {
+            localStorage.removeItem('algoritmalar');
+            localStorage.removeItem('kosulluIfade');
+            localStorage.removeItem('veriTipi');
+            localStorage.removeItem('kendiniTestEt');
+            location.reload(); // Sayfayı yeniden yükle
+        });
+</script>
+  
+</body>
+</html>
