@@ -5,3 +5,4 @@ https://github.com/irem6142/PyGuru/assets/83772404/ece5d0e0-868a-4ace-9ecf-ee542
 
 
 ### Pythona yeni başlayanlar için yapmış olduğumuz web sitesi [Senanur Bayram](https://github.com/sena1bayram) ile yaptık
+Web sitesi içinde kendini test et, algoritmalar, veri türleri, koşullu ifadeler ve kullanıcı paneli bulunmakta.
